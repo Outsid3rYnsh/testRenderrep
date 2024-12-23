@@ -8,7 +8,7 @@ app.config.from_object(Config)
 db.init_app(app)
 jwt = JWTManager(app)
 
-@app.before_first_request
+@app.before_request
 def create_tables():
     db.create_all()
 
