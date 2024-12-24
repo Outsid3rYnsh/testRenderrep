@@ -5,7 +5,7 @@ from flask_jwt_extended import JWTManager, create_access_token, jwt_required, ge
 app = Flask(__name__)
 
 # PostgreSQL connection string
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:mysecretpassword@some:5432/library'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:mysecretpassword@127.0.0.1:5432/library'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.v0fhj-gqQALbBnTHzpp0weAoP-e3JTIzK76MWXdLijM'  # Change to a secure key
 
